@@ -1,0 +1,34 @@
+{
+  "name": "webpack-progress-ora-plugin",
+  "version": "1.0.0",
+  "description": "A progress ora plugin for Webpack.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/s00d/webpack-progress-ora-plugin.git"
+  },
+  "keywords": [
+    "webpack",
+    "plugin",
+    "progress",
+    "bar",
+    "ora"
+  ],
+  "author": "Pavel Kuzmin <Virus191288@gmail.com> (https://github.com/s00d)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/s00d/webpack-progress-ora-plugin/issues"
+  },
+  "homepage": "https://github.com/s00d/webpack-progress-ora-plugin#readme",
+  "dependencies": {
+    "chalk": "^1.1.1",
+    "object.assign": "^4.0.1",
+    "ora": "^2.1.0"
+  },
+  "peerDependencies": {
+    "webpack": "^1.3.0 || ^2 || ^3 || ^4"
+  }
+}
