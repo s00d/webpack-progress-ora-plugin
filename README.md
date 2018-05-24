@@ -1,5 +1,5 @@
 # webpack-progress-ora-plugin
-[webpack-progress-ora-plugin](https://i.imgur.com/qCzYKVE.gifv)
+![webpack-progress-ora-plugin](https://github.com/s00d/webpack-progress-ora-plugin/raw/master/image.gif)
 
 ## Installation
 
