@@ -1,6 +1,6 @@
 {
   "name": "webpack-progress-ora-plugin",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "A progress ora plugin for Webpack.",
   "main": "index.js",
   "scripts": {
@@ -24,8 +24,8 @@
   },
   "homepage": "https://github.com/s00d/webpack-progress-ora-plugin#readme",
   "dependencies": {
-    "chalk": "^1.1.1",
-    "object.assign": "^4.0.1",
+    "chalk": "^2.4.1",
+    "object.assign": "^4.1.0",
     "ora": "^2.1.0"
   },
   "peerDependencies": {
