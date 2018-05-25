@@ -2,8 +2,9 @@ const chalk = require('chalk');
 const webpack = require('webpack');
 const ora = require('ora');
 
-
 module.exports = function ProgressOraPlugin(options = {}) {
+    options.pattern = options.pattern || chalk.bold('[') + ':percent:%' + chalk.bold('] ') + chalk.cyan.bold(':text:')
+    options.pattern_no_stderr = options.pattern_no_stderr || chalk.bold('▒');
     let stderr_check = false;
     let stream = options.stream || process.stderr;
     let enabled = stream && stream.isTTY;
@@ -14,7 +15,7 @@ module.exports = function ProgressOraPlugin(options = {}) {
         stderr_check = true;
     }
 
-    options.text = chalk.bold('[') + '0%' + chalk.bold('] ') + chalk.cyan.bold('build start');
+    options.text = options.pattern.replace(/\:percent\:/, '0').replace(/\:text\:/, 'build start');
     let spinner = ora(options).start();
 
     let running = false;
@@ -30,9 +31,9 @@ module.exports = function ProgressOraPlugin(options = {}) {
         let newPercent = Math.ceil(percent * 100);
 
         if (lastPercent !== newPercent) {
-            spinner.text = chalk.bold('[') + newPercent + '%' + chalk.bold('] ') + chalk.cyan.bold(msg)
-            if(stderr_check && lastText !== msg) {
-                stream.write(chalk.bold('[') + newPercent + '%' + chalk.bold('] ') + chalk.cyan.bold(msg) + '\n');
+            spinner.text = options.pattern.replace(/\:percent\:/, newPercent).replace(/\:text\:/, msg)
+            if(stderr_check) {
+                stream.write(options.pattern_no_stderr);
             }
             lastText = msg;
             lastPercent = newPercent;
@@ -48,6 +49,7 @@ module.exports = function ProgressOraPlugin(options = {}) {
 
             spinner.stop();
 
+            if(stderr_check) stream.write(chalk.green.bold('\n\n'));
             stream.write(chalk.green.bold('Build completed in ' + buildTime + '\n\n'));
             running = false;
         }

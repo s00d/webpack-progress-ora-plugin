@@ -26,7 +26,10 @@ plugins: [
 Accepts almost all of the same options as [ora](https://github.com/sindresorhus/ora#options).
 
 additional
-- stderr_check -  check stderr and show messege if not exist(default: folse)
+- pattern - pattern for message(default: chalk.bold('[') + ':percent:%' + chalk.bold('] ') + chalk.cyan.bold(':text:')), params: :percent: - percent complete; :text: - build stage
+- stderr_check - check stderr and show message if not exist(default: false)
+- pattern_no_stderr -(default: ▒)
+
 
 ```javascript
 new WebpackProgressOraPlugin({
