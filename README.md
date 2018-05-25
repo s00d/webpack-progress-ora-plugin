@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.org/s00d/webpack-progress-ora-plugin.svg?branch=master)](https://travis-ci.org/s00d/webpack-progress-ora-plugin)
+[![npm version](https://badge.fury.io/js/webpack-progress-ora-plugin.svg)](https://badge.fury.io/js/webpack-progress-ora-plugin)
+
 # webpack-progress-ora-plugin
 ![webpack-progress-ora-plugin](https://github.com/s00d/webpack-progress-ora-plugin/raw/master/image.gif)
 
