@@ -37,7 +37,7 @@ module.exports = function ProgressOraPlugin(options = {}) {
 
         let newPercent = Math.ceil(percent * 100);
 
-        if (lastPercent !== newPercent || (options.clear_on_update && !stderr_check)) {
+        if (lastPercent !== newPercent) {
             if(!stderr_check && options.clear_on_update) {
                 process.stdout.write('\x1Bc');
             }

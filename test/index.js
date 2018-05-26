@@ -128,7 +128,7 @@ describe('Ora Plugin', function() {
         clearInterval(timeout);
         done();
       }
-     }, 10)
+     }, 3)
   });
 
   it('works without TTY', function(done) {
@@ -147,6 +147,6 @@ describe('Ora Plugin', function() {
         clearInterval(timeout);
         done();
       }
-     }, 10)
+     }, 3)
   });
 });
