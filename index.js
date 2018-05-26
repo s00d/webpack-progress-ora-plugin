@@ -37,8 +37,8 @@ module.exports = function ProgressOraPlugin(options = {}) {
 
         let newPercent = Math.ceil(percent * 100);
 
-        if (lastPercent !== newPercent || (options.clear && !stderr_check)) {
-            if(!stderr_check && options.clear) {
+        if (lastPercent !== newPercent || (options.clear_on_update && !stderr_check)) {
+            if(!stderr_check && options.clear_on_update) {
                 process.stdout.write('\x1Bc');
             }
             spinner.text = options.pattern.replace(/\:percent\:/, newPercent).replace(/\:text\:/, msg)
@@ -65,7 +65,7 @@ module.exports = function ProgressOraPlugin(options = {}) {
                 stream.write(chalk.green.bold('\n\n'));
                 stream.write(chalk.green.bold('Build completed in ' + buildTime + '\n\n'));
             } else {
-                if(options.clear_on_update) {
+                if(options.clear) {
                     process.stdout.write('\x1Bc');
                 }
                 spinner.succeed(chalk.green.bold('Build completed in ' + buildTime + '\n\n'))
