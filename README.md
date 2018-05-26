@@ -33,7 +33,8 @@ additional
     * params: :percent: - percent complete; :text: - build stage
 - stderr_check - check stderr and show message if not exist(default: false)
 - pattern_no_stderr -(default: ▒)
-- clear - clear terminal
+- clear - clear terminal after start and end build
+- clear_on_update  - clear terminal when progress update
 - rerander - render text every update progress
 
 

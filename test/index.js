@@ -90,7 +90,7 @@ describe('Ora Plugin', function() {
   
   /* eslint-disable no-console */
   it('works with long extraneous console output', function(done) {
-    var plugin = new WebpackProgressOraPlugin({ interval: 50, rerander: true, clear: true });
+    var plugin = new WebpackProgressOraPlugin({ interval: 50, rerander: true, clear: true, clear_on_update: true });
     plugin.handler(0, 'started');
     var i = 0;
 
@@ -115,7 +115,7 @@ describe('Ora Plugin', function() {
   });
 
   it('works with time', function(done) {
-    var plugin = new WebpackProgressOraPlugin({rerander: true, clear: true});
+    var plugin = new WebpackProgressOraPlugin({rerander: true, clear: true, clear_on_update: true});
     plugin.handler(0, 'started');
 
     let progress = 0;

@@ -8,6 +8,7 @@ module.exports = function ProgressOraPlugin(options = {}) {
     options.pattern_no_stderr = options.pattern_no_stderr || chalk.bold('▒');
     options.rerander = options.rerander || false;
     options.clear = options.clear || false;
+    options.clear = options.clear_on_update || false;
     let stderr_check = false;
     let stream = options.stream || process.stderr;
     let enabled = stream && stream.isTTY;
@@ -64,7 +65,7 @@ module.exports = function ProgressOraPlugin(options = {}) {
                 stream.write(chalk.green.bold('\n\n'));
                 stream.write(chalk.green.bold('Build completed in ' + buildTime + '\n\n'));
             } else {
-                if(options.clear) {
+                if(options.clear_on_update) {
                     process.stdout.write('\x1Bc');
                 }
                 spinner.succeed(chalk.green.bold('Build completed in ' + buildTime + '\n\n'))
