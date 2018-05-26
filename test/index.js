@@ -87,7 +87,6 @@ describe('Ora Plugin', function() {
       return progress >= 1;
     });
   });
-  
   /* eslint-disable no-console */
   it('works with long extraneous console output', function(done) {
     var plugin = new WebpackProgressOraPlugin({ interval: 50, rerander: true, clear: true, clear_on_update: true });
@@ -128,7 +127,7 @@ describe('Ora Plugin', function() {
         clearInterval(timeout);
         done();
       }
-     }, 3)
+    }, 3)
   });
 
   it('works without TTY', function(done) {
@@ -147,6 +146,6 @@ describe('Ora Plugin', function() {
         clearInterval(timeout);
         done();
       }
-     }, 3)
+    }, 3)
   });
 });

@@ -35,7 +35,7 @@ additional
 - pattern_no_stderr -(default: ▒)
 - clear - clear terminal after start and end build
 - clear_on_update  - clear terminal when progress update
-- rerander - render text every update progress
+- update_render - render text every update progress
 
 
 ```javascript
