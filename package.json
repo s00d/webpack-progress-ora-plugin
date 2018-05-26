@@ -4,8 +4,7 @@
   "description": "A progress ora plugin for Webpack.",
   "main": "index.js",
   "scripts": {
-    "pretest": "npm run lint",
-    "lint": "eslint --ignore-path .gitignore .",
+    "pretest": "eslint --ignore-path .gitignore .",
     "test": "./node_modules/.bin/mocha test"
   },
   "repository": {
