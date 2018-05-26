@@ -5,15 +5,14 @@ function loop(progress, onLoop) {
 
   if (!finished) {
     progress += 0.000003;
-    process.nextTick(loop.bind(null, progress, onLoop));
+    process.nextTick(loop.bind(null, progress, onLoop))
   }
 }
-
 describe('Ora Plugin', function() {
   this.timeout(10000);
 
   it('works with default options', function(done) {
-    var plugin = new WebpackProgressOraPlugin();
+    var plugin = new WebpackProgressOraPlugin({rerander: true});
     plugin.handler(0, 'started');
 
     loop(0.01, function(progress) {
@@ -29,7 +28,7 @@ describe('Ora Plugin', function() {
   });
 
   it('works with large debounce interval', function(done) {
-    var plugin = new WebpackProgressOraPlugin({ interval: 1000 });
+    var plugin = new WebpackProgressOraPlugin({ interval: 1000, rerander: true });
     plugin.handler(0, 'started');
 
     loop(0.01, function(progress) {
@@ -45,7 +44,7 @@ describe('Ora Plugin', function() {
   });
 
   it('works with small debounce interval', function(done) {
-    var plugin = new WebpackProgressOraPlugin({ interval: 50 });
+    var plugin = new WebpackProgressOraPlugin({ interval: 50, rerander: true });
     plugin.handler(0, 'started');
 
     loop(0.01, function(progress) {
@@ -62,7 +61,7 @@ describe('Ora Plugin', function() {
 
   /* eslint-disable no-console */
   it('works with extraneous console output', function(done) {
-    var plugin = new WebpackProgressOraPlugin({ interval: 50 });
+    var plugin = new WebpackProgressOraPlugin({ interval: 50, rerander: true, clear: true });
     plugin.handler(0, 'started');
     var i = 0;
 
@@ -91,7 +90,7 @@ describe('Ora Plugin', function() {
   
   /* eslint-disable no-console */
   it('works with long extraneous console output', function(done) {
-    var plugin = new WebpackProgressOraPlugin({ interval: 50 });
+    var plugin = new WebpackProgressOraPlugin({ interval: 50, rerander: true, clear: true });
     plugin.handler(0, 'started');
     var i = 0;
 
@@ -113,5 +112,41 @@ describe('Ora Plugin', function() {
       i++;
       return progress >= 1;
     });
+  });
+
+  it('works with time', function(done) {
+    var plugin = new WebpackProgressOraPlugin({rerander: true, clear: true});
+    plugin.handler(0, 'started');
+
+    let progress = 0;
+    let timeout = setInterval(() => { 
+      progress += 0.003;
+      if (progress < 1) {
+        process.nextTick(() => plugin.handler(progress, 'progress: ' + progress))
+      } else {
+        process.nextTick(() => plugin.handler(progress, 'finished'))
+        clearInterval(timeout);
+        done();
+      }
+     }, 10)
+  });
+
+  it('works without TTY', function(done) {
+    var stream = process.stderr;
+    stream.isTTY = false;
+    var plugin = new WebpackProgressOraPlugin({rerander: true, clear: true, stderr_check: true});
+    plugin.handler(0, 'started');
+
+    let progress = 0;
+    let timeout = setInterval(() => { 
+      progress += 0.003;
+      if (progress < 1) {
+        process.nextTick(() => plugin.handler(progress, 'progress: ' + progress))
+      } else {
+        process.nextTick(() => plugin.handler(progress, 'finished'))
+        clearInterval(timeout);
+        done();
+      }
+     }, 10)
   });
 });
