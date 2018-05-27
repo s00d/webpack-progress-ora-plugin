@@ -67,7 +67,7 @@ module.exports = function ProgressOraPlugin(options = {}) {
 
       if(stderr_check) {
         stream.write(chalk.green.bold('\n\n'));
-        stream.write(chalk.green.bold('Build completed in ' + buildTime + '\n\n'));
+        stream.write(chalk.green('✓') + chalk.green.bold(' Build completed in ' + buildTime + '\n\n'));
       } else {
         if(options.clear) {
           stream.write('\x1Bc');
