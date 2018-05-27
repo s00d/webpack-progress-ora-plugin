@@ -114,7 +114,7 @@ describe('Ora Plugin', function() {
   });
 
   it('works with time', function(done) {
-    var plugin = new WebpackProgressOraPlugin({rerander: true, clear: true, clear_on_update: true});
+    var plugin = new WebpackProgressOraPlugin({clear: true});
     plugin.handler(0, 'started');
 
     let progress = 0;
