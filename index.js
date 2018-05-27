@@ -36,17 +36,22 @@ module.exports = function ProgressOraPlugin(options = {}) {
   return new webpack.ProgressPlugin(function (percent, msg) {
     let newPercent = Math.ceil(percent * 100);
 
-    if (lastPercent !== newPercent) {
-      if(!stderr_check && options.clear_on_update) {
+    if (!stderr_check && lastPercent !== newPercent) {
+      if(options.clear_on_update) {
         stream.write('\x1Bc');
       }
       spinner.text = options.pattern.replace(/\:percent\:/, newPercent).replace(/\:text\:/, msg)
-      if(stderr_check) {
-        stream.write(options.pattern_no_stderr);
-      } else if(options.update_render) {
+      if(options.update_render) {
         spinner.render();
       }
       lastPercent = newPercent;
+    }
+    if(stderr_check && lastPercent !== newPercent) {
+      let count = Math.floor((newPercent - lastPercent) / 5);
+      if(count > 0) {
+        stream.write(options.pattern_no_stderr.repeat(count));
+        lastPercent = newPercent;
+      }
     }
 
     if (!isRunning) {
