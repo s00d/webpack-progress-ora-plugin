@@ -49,13 +49,16 @@ module.exports = function ProgressOraPlugin(options = {}) {
     if(stderr_check && lastPercent !== newPercent) {
       let count = Math.floor((newPercent - lastPercent) / 5);
       if(count > 0) {
+        if(lastPercent === 0) {
+          stream.write(chalk.green.bold('______________________\n'))
+          stream.write(chalk.green.bold('['))
+        }
         stream.write(options.pattern_no_stderr.repeat(count));
         lastPercent = newPercent;
       }
     }
 
     if (!isRunning) {
-
       isRunning = true;
       startTime = new Date;
       lastPercent = 0;
@@ -63,12 +66,13 @@ module.exports = function ProgressOraPlugin(options = {}) {
       let now = new Date;
       let buildTime = (now - startTime) / 1000 + 's';
 
-      spinner.stop();
-
       if(stderr_check) {
+        stream.write(chalk.green.bold(']')+'\n\n')
         stream.write(chalk.green.bold('\n\n'));
         stream.write(chalk.green('✓') + chalk.green.bold(' Build completed in ' + buildTime + '\n\n'));
       } else {
+        spinner.stop();
+
         if(options.clear) {
           stream.write('\x1Bc');
         }
