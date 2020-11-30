@@ -13,6 +13,7 @@ declare namespace WebpackProgressOraPlugin {
         update_render: boolean;
         clear: boolean;
         clear_on_update: boolean;
+        stderr_check: boolean;
         text: string;
     }
 }
