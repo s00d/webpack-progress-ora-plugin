@@ -1,0 +1,38 @@
+package.json
+  h_ee6cac30a1b83a 3
+  s_6546c6e63a448f::t_40707aed78755a 30
+.github/workflows/ci.yml
+  s_6546c6e63a448f::t_448098da53a54c 1-24
+README.md
+  s_6546c6e63a448f::t_6f585f4673ab72 1-3
+scripts/record-gif.sh
+  s_6546c6e63a448f::t_72b7bfd7928a06 1-24
+scripts/demo.mjs
+  s_6546c6e63a448f::t_62e8aa7734a776 11
+scripts/demo.tape
+  s_6546c6e63a448f::t_67f5a67b956012 1-6,12-13,16-19,21-22,24-25,27,29-30
+  s_6546c6e63a448f::t_9d5cc3ecd97551 7-11,14-15,20,23,26,28,31
+scripts/record-demo.mjs
+  s_6546c6e63a448f::t_d0890edf0d3192 1-27
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "3b68bcd4ffaace38f95cc936a90c2cda54c5931c",
+  "prompts": {},
+  "humans": {
+    "h_ee6cac30a1b83a": {
+      "author": "Pavel Kuzmin <Virus191288@gmail.com>"
+    }
+  },
+  "sessions": {
+    "s_6546c6e63a448f": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "d1e2caf8-70be-4e39-9fad-72309d20f3b5",
+        "model": "default"
+      },
+      "human_author": "Pavel Kuzmin <Virus191288@gmail.com>"
+    }
+  }
+}
