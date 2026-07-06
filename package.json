@@ -1,6 +1,6 @@
 {
   "name": "webpack-progress-ora-plugin",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "description": "A progress ora plugin for Webpack.",
   "type": "module",
   "sideEffects": false,
@@ -27,6 +27,7 @@
     "demo": "npm run build && node scripts/demo.mjs",
     "demo:bar": "npm run build && node scripts/demo.mjs bar",
     "demo:clear": "npm run build && node scripts/demo.mjs clear",
+    "record:gif": "bash scripts/record-gif.sh",
     "pretest": "npm run build",
     "lint": "eslint .",
     "test": "vitest run",

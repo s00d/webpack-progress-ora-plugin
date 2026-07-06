@@ -8,7 +8,7 @@ const delay = Number(process.argv[3] ?? 40);
 
 if (mode === 'bar') {
   mockNonTtyStream(process.stderr);
-} else {
+} else if (!process.stderr.isTTY) {
   mockTtyStream(process.stderr);
 }
 

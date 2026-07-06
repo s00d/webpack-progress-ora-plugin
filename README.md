@@ -1,5 +1,6 @@
-[![Build Status](https://travis-ci.org/s00d/webpack-progress-ora-plugin.svg?branch=master)](https://travis-ci.org/s00d/webpack-progress-ora-plugin)
-[![npm version](https://badge.fury.io/js/webpack-progress-ora-plugin.svg)](https://badge.fury.io/js/webpack-progress-ora-plugin)
+[![CI](https://github.com/s00d/webpack-progress-ora-plugin/actions/workflows/ci.yml/badge.svg)](https://github.com/s00d/webpack-progress-ora-plugin/actions/workflows/ci.yml)
+[![npm version](https://img.shields.io/npm/v/webpack-progress-ora-plugin.svg)](https://www.npmjs.com/package/webpack-progress-ora-plugin)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 
 # webpack-progress-ora-plugin
 ![webpack-progress-ora-plugin](https://github.com/s00d/webpack-progress-ora-plugin/raw/master/image.gif)
