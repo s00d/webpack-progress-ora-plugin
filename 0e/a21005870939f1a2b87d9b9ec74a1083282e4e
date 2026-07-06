@@ -1,0 +1,76 @@
+tsconfig.json
+  s_6546c6e63a448f::t_92de8388477881 1-22
+package.json
+  s_6546c6e63a448f::t_e1044ea53a6578 27-29
+  s_6546c6e63a448f::t_9c3a56be399718 31
+  s_6546c6e63a448f::t_de596c70f86b36 3,5,7-16,18-24,32-35,54,56,67,70-71,73-75
+  s_6546c6e63a448f::t_5b0caa87f064b5 6
+  s_6546c6e63a448f::t_6b7e5f0d97569f 26
+  s_6546c6e63a448f::t_48a89b345e277c 55,58-59,63,66,68-69,72,76
+  s_6546c6e63a448f::t_53eb4a465ffa3e 30
+  s_6546c6e63a448f::t_8a019cb3a19858 17
+  s_6546c6e63a448f::t_66533cb726b638 60
+test/index.test.ts
+  s_6546c6e63a448f::t_2d3a66f92e534a 4
+  s_6546c6e63a448f::t_c6c2a63af7aefc 198-202,204-205,207-209,211-220
+  s_6546c6e63a448f::t_ee3cf6b25a9a8c 5
+  s_6546c6e63a448f::t_b57e733a5adff9 15-17
+  s_6546c6e63a448f::t_0c4db4ee04e11e 28-29,31-35
+  s_6546c6e63a448f::t_6a3f9f37ca8097 195,197
+  s_6546c6e63a448f::t_a95d19a25d95e5 2,6-8,11,14,18-27,38-54,56-57,60-65,67-73,75-76,80-85,87-93,95-96,100-130,133-166,170-191,194,196,203,206,210
+  s_6546c6e63a448f::t_cc99d3ca9a2a79 30,36-37
+  s_6546c6e63a448f::t_82554c639a7775 221
+  s_6546c6e63a448f::t_64312e219336b4 1
+src/ProgressBar.ts
+  s_6546c6e63a448f::t_40a4a68f24aa93 1
+  s_6546c6e63a448f::t_425273dfc27059 2-30,32-33
+  s_6546c6e63a448f::t_57d7f24b60c733 31
+test/setup.ts
+  s_6546c6e63a448f::t_32c3bd5b5dbac5 1-3
+src/types.ts
+  s_6546c6e63a448f::t_065c5cf33eef63 1-24
+tsconfig.node.json
+  s_6546c6e63a448f::t_a6db6902b74bcd 1-11
+scripts/demo-helpers.mjs
+  s_6546c6e63a448f::t_b07766c6a3e7fd 1-5,7-9,12-16
+.gitignore
+  s_6546c6e63a448f::t_6ecbf99403be23 28-29
+eslint.config.js
+  s_6546c6e63a448f::t_3cbadb0966649f 1-7,9-22,24
+src/index.ts
+  s_6546c6e63a448f::t_79c10ed6e0188a 25
+  s_6546c6e63a448f::t_5d000590dd68a4 1-24,26,29,31,34,40-44,49-50,52-53,56-59,64,67,72,74,76-78,81,84-85,87,91-101
+  s_6546c6e63a448f::t_953e966276d50f 45
+vite.config.ts
+  s_6546c6e63a448f::t_44667657be6f84 20
+  s_6546c6e63a448f::t_9f6fe99e9d3d0a 11
+  s_6546c6e63a448f::t_781ae67680d57e 8
+  s_6546c6e63a448f::t_9ac9e671832043 35
+  s_6546c6e63a448f::t_7a275ce7aab727 12
+  s_6546c6e63a448f::t_2d4dcffc91bc8b 7,9
+  s_6546c6e63a448f::t_fc76f0e5b7551d 1-6,10,13-19,21-34,36-37
+test/helpers.ts
+  s_6546c6e63a448f::t_8cf9b59ad303e1 1,7-9,13
+  s_6546c6e63a448f::t_f88f0b6a85b2b7 2-6,10-12,14-20
+scripts/demo.mjs
+  s_6546c6e63a448f::t_ef535e5289b128 4,8-13
+  s_6546c6e63a448f::t_d093ee9c5c213f 1-3,5-7,14-31
+package-lock.json
+  s_6546c6e63a448f::t_06c53964f3e100 1-4909
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.6.10",
+  "base_commit_sha": "0ea21005870939f1a2b87d9b9ec74a1083282e4e",
+  "prompts": {},
+  "sessions": {
+    "s_6546c6e63a448f": {
+      "agent_id": {
+        "tool": "cursor",
+        "id": "d1e2caf8-70be-4e39-9fad-72309d20f3b5",
+        "model": "default"
+      },
+      "human_author": "Pavel Kuzmin <Virus191288@gmail.com>"
+    }
+  }
+}
