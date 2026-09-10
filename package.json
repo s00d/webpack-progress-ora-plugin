@@ -73,7 +73,7 @@
     "typescript-eslint": "^8.35.1",
     "vite": "^6.3.5",
     "vite-plugin-dts": "^4.5.4",
-    "vitest": "^3.2.1",
+    "vitest": "^5.0.0",
     "webpack": "^5.108.4"
   }
 }
